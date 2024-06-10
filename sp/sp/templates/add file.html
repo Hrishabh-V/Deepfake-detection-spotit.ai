@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>SPOTIT.AI</title>
+<style>
+  /* CSS for centering div and button style */
+  body {
+    background-image: url(/static/images/bg.jpg);
+    text-align: center; /* Centering the content */
+  }
+  .container {
+    margin: 0 auto; /* Centering the container */
+    width: 50%; /* Adjust container width */
+  }
+  .upload-container {
+    margin-top: 20px; /* Adjust margin as needed */
+    text-align: center; /* Centering the content */
+  }
+  input[type="file"], input[type="submit"] {
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text */
+    padding: 10px 20px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    margin-right: 10px; /* Adjusted spacing */
+  }
+</style>
+</head>
+
+<body>
+<div class="container">
+  <div class="upload-container">
+    <form action="/addfilepost" method="post" enctype="multipart/form-data" name="form1" id="form1">
+      <input type="file" name="file">
+      <!-- Apply same button style -->
+      <input type="submit" name="Submit" value="Upload">
+    </form>
+
+  </div>
+</div>
+<div>{{ val.0 }}  {{ val.1 }}</div>
+</body>
+</html>

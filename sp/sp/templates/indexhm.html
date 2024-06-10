@@ -1,0 +1,651 @@
+{% load static %}
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>SPOTIT.AI</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/static/home/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="/static/home/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/static/home/css/responsive.css" rel="stylesheet" />
+</head>
+
+<style>
+  .result-box {
+   border: 1px solid #ccc;
+padding: 20px;
+margin-top: 20px;
+background-color: #FFFFFF;
+border-radius: 0%;
+
+  }
+  </style>
+
+
+<body>
+
+
+{% if popup %}
+        <script>
+            alert("No file uploaded.");
+        </script>
+    {% endif %}
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              SPOTIT.AI
+            </span>
+          </a>
+
+          <div class="navbar-collapse" id="">
+            <div class="d-none d-lg-flex ml-auto flex-column flex-lg-row align-items-center mt-3">
+              <ul class="navbar-nav ">
+                <li class="nav-item">
+
+                </li>
+              </ul>
+
+            </div>
+
+            <div class="custom_menu-btn">
+              <button onclick="openNav()">
+                <span class="s-1"> </span>
+                <span class="s-2"> </span>
+                <span class="s-3"> </span>
+              </button>
+            </div>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="addfile">Home</a>
+                <a href="#section1">About</a>
+{#                <a href="business.html">Business</a>#}
+{#                <a href="more.html">More</a>#}
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+
+      <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">01</li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1">02</li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2">03</li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="slider_item-box">
+                <div class="slider_item-container">
+                  <div class="slider_item-detail">
+                    <h1>
+
+                      <span>SPOTIT.AI</span>
+                    </h1>
+                    <div style="border-radius: 10px; background-color: black; padding: 20px;">
+  <form action="/addfilepost" method="post" enctype="multipart/form-data">
+    <div style="display: inline-block; width: 70%;">
+      <input type="file" placeholder="Enter your business name" name="file" style="border-radius: 5px; padding: 5px; width: 100%;">
+    </div>
+    <div style="display: inline-block; width: 28%; margin-left: 2%;">
+      <input type="submit" value="Submit" style="border-radius: 5px; padding: 5px; background-color: white; color: black; width: 100%;">
+    </div>
+  </form>
+  <div class="result-box" style="color: white; border-radius: 10px; background-color: black; padding: 10px; margin-top: 10px;">
+    <!-- Output result here -->
+    Confidence Score: {{ val.0 }} <br>
+  </div>
+  <div class="result-box" style="color: white; border-radius: 10px; background-color: black; padding: 10px; margin-top: 10px;">
+    <!-- Output result here -->
+    Media is {{ val.1 }}
+  </div>
+</div>
+
+{#                    <div>#}
+{#                      <a href="">#}
+{#                        Read More#}
+{#                      </a>#}
+{#                    </div>#}
+                  </div>
+                </div>
+              </div>
+            </div>
+{#            <div class="carousel-item">#}
+{#              <div class="slider_item-box">#}
+{#                <div class="slider_item-container">#}
+{#                  <div class="slider_item-detail">#}
+{#                    <h1>#}
+{#                      Make Best <br />#}
+{#                      <span>Your Website</span>#}
+{#                    </h1>#}
+{#                    <div>#}
+{#                      <form action="">#}
+{#                        <input type="text" placeholder="Enter your business name" />#}
+{#                        <button type="submit">#}
+{#                          Submit#}
+{#                        </button>#}
+{#                      </form>#}
+{#                    </div>#}
+{#                    <div>#}
+{#                      <a href="">#}
+{#                        Read More#}
+{#                      </a>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#            <div class="carousel-item">#}
+{#              <div class="slider_item-box">#}
+{#                <div class="slider_item-container">#}
+{#                  <div class="slider_item-detail">#}
+{#                    <h1>#}
+{#                      Make Best <br />#}
+{#                      <span>Your Website</span>#}
+{#                    </h1>#}
+{#                    <div>#}
+{#                      <form action="">#}
+{#                        <input type="text" placeholder="Enter your business name" />#}
+{#                        <button type="submit">#}
+{#                          Submit#}
+{#                        </button>#}
+{#                      </form>#}
+{#                    </div>#}
+{#                    <div>#}
+{#                      <a href="">#}
+{#                        Read More#}
+{#                      </a>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{#      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">#}
+{#        <span class="sr-only">Previous</span>#}
+{#      </a>#}
+{#      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">#}
+{#        <span class="sr-only">Next</span>#}
+{#      </a>#}
+    </section>
+    <!-- end slider section -->
+  </div>
+
+{#  <!-- about section -->#}
+{##}
+{#  <section class="about_section layout_padding">#}
+{#    <div class="row">#}
+{#      <div class="col-md-5 offset-md-1">#}
+{#        <div class="img-box">#}
+{#          <img src="/static/home/images/about.png" alt="" />#}
+{#          <div class="play_btn-box">#}
+{#            <div class="play-btn"></div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{#      <div class="col-md-6 col-lg-4">#}
+{#        <div class="detail-box">#}
+{#          <h3>#}
+{#            About Us#}
+{#          </h3>#}
+{#          <p>#}
+{#            It is a long established fact that a reader will be distracted by#}
+{#            the readable content of a page when looking at its layout. The#}
+{#            point of using LoremIt is a long established fact that a reader#}
+{#            will be distracted by the readable content of a page when looking#}
+{#            at its layout. The point of using LoremIt is a long established#}
+{#            fact that a reader will be distracted by the readable content of a#}
+{#            page when looking at its layout. The point of using Lorem#}
+{#          </p>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </section>#}
+{##}
+{#  <!-- end about section -->#}
+
+  <!-- business section -->
+<section class="business_section layout_padding">
+    <div class="container" style="width: 80%; height: 300px;">
+        <div class="business_container">
+            <div class="content-box box-1" style="width: 90%; height: 310px;color: black;">
+                <div class="detail">
+                    <h3>
+                        What is Deep Fake
+                    </h3>
+                    <p>Deepfake technology employs advanced algorithms<br>
+                        to intricately manipulate video and audio,<br>
+                        seamlessly blending fiction with reality, and<br>
+                        opening doors to both awe-inspiring creativity <br>
+                        and profound ethical considerations.<br>
+                    </p>
+                </div>
+            </div>
+            <div class="content-box box-1" style="width: 90%; height: 310px;color: black;">
+                <div class="detail">
+                    <h3>
+                        What is Deep Fake Detection
+                    </h3>
+                    <p> Deepfake detection acts as a digital detective
+                        it carefully inspects videos and images,
+                        looking for any signs of manipulation.
+                        By comparing them with authentic media,
+                        it can spot the fakes and help keep our
+                        online world honest.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+{#        <div>#}
+{#          <a href="">#}
+{#            read More#}
+{#          </a>#}
+{#        </div>#}
+
+
+
+
+
+          </p>
+        </div>
+{#        <div>#}
+{#          <a href="">#}
+{#            read More#}
+{#          </a>#}
+{#        </div>#}
+        </div>
+      <div class="content-box box-3">
+        <div class="detail">
+          <h3>
+
+          </h3>
+          <p>
+
+          </p>
+        </div>
+{#        <div>#}
+{#          <a href="">#}
+{#            read More#}
+{#          </a>#}
+{#        </div>#}
+      </div>
+    </div>
+  </section>
+
+  <!-- end business section -->
+
+  <!-- make section -->
+
+  <section class="make_section layout_padding">
+    <div class="container">
+      <div class="box">
+        <h2>
+         Unveiling Deception<br />
+          Deepfake Detection Made Simple with<br>
+        </h2>
+        <h2 class="make-heading">
+          SPOTIT.AI
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- end make section -->
+  <!-- online section -->
+<section class="online_section layout_padding">
+  <div class="d-flex justify-content-center">
+    <h2>
+      Harnessing Deepfakes: Exploring Their Potential
+    </h2>
+  </div>
+  <div class="layout_padding">
+    <div class="container-fluid ">
+      <div class="row ">
+        <div class="col-md-5 offset-md-1">
+          <div class="img-box">
+            <div class="box-1">
+              <video src="/static/home/images/dvideo.mov" autoplay loop muted style="width: 100%; height: auto;"></video>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="detail-box">
+            <h2 class="number-style">
+              01
+            </h2>
+            <p>
+              Deepfake technology presents a myriad of opportunities within the film industry. Its ability to seamlessly superimpose faces onto different actors' bodies opens up new horizons for storytelling, allowing filmmakers to resurrect historical figures or seamlessly rejuvenate aging actors. Additionally, deepfakes streamline the process of dubbing and localization, enabling films to reach global audiences more efficiently. Moreover, this technology offers cost-effective solutions for complex visual effects, democratizing access to high-quality production tools for independent filmmakers. Overall, deepfakes have the potential to revolutionize filmmaking, offering creative freedom and efficiency like never before.
+            </p>
+            <!-- Add a link for "Read More" if needed -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{#  <section class="online_section layout_padding">#}
+{#    <div class="d-flex justify-content-center">#}
+{#      <h2>#}
+{#        Harnessing Deepfakes: Exploring Their Potential#}
+{#      </h2>#}
+{#    </div>#}
+{#    <div class="layout_padding">#}
+{#      <div class="container-fluid ">#}
+{#        <div class="row ">#}
+{#          <div class="col-md-5 offset-md-1">#}
+{#            <div class="img-box">#}
+{#              <div class="box-1">#}
+{#                <div>#}
+{#                  <img src="/static/home/images/o-1.png" alt="" />#}
+{#                </div>#}
+{#                <div class="">#}
+{#                  <img src="/static/home/images/o-2.png" alt="" />#}
+{#                </div>#}
+{#              </div>#}
+{#              <div class="box-2 ">#}
+{#                <div>#}
+{#                  <img src="/static/home/images/o-3.png" alt="" />#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{##}
+{#              <div class="img-box">#}
+{#  <div class="box-1">#}
+{#    <video src="/static/home/images/dvideo.mov" autoplay loop muted style="width: 100%; height: auto;"></video>#}
+{#  </div>#}
+{#</div>#}
+{##}
+{#          </div>#}
+{#          <div class="col-md-4">#}
+{#            <div class="detail-box">#}
+{#              <h2 class="number-style">#}
+{#                01#}
+{#              </h2>#}
+{#              <p>#}
+{##}
+{#              </p>#}
+{#              <div>#}
+{#                <a href="">#}
+{#                  Read More#}
+{#                </a>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </section>#}
+{##}
+{#  <!-- end online section -->#}
+
+  <!-- client section -->
+{#  <section class="client_section layout_padding">#}
+{#    <div class="container">#}
+{#      <div class="d-flex justify-content-center">#}
+{#        <h2>#}
+{#          Testimonial#}
+{#        </h2>#}
+{#      </div>#}
+{#      <div id="carouselExample2Indicators" class="carousel slide" data-ride="carousel">#}
+{#        <ol class="carousel-indicators">#}
+{#          <li data-target="#carouselExample2Indicators" data-slide-to="0" class="active"></li>#}
+{#          <li data-target="#carouselExample2Indicators" data-slide-to="1"></li>#}
+{#          <li data-target="#carouselExample2Indicators" data-slide-to="2"></li>#}
+{#        </ol>#}
+{#        <div class="carousel-inner">#}
+{#          <div class="carousel-item active">#}
+{#            <div class="client_container">#}
+{#              <div class="row">#}
+{#                <div class="col-md-6">#}
+{#                  <div class="client_box">#}
+{#                    <div class="detail_box">#}
+{#                      <div class="img_box">#}
+{#                        <img src="/static/home/images/client-1.jpg" />#}
+{#                      </div>#}
+{#                      <h5>#}
+{#                        zabih jo#}
+{#                      </h5>#}
+{#                      <p>#}
+{#                        Contrary to popular belief, Lorem Ipsum is not simply random#}
+{#                        text. It has roots in a piece of classical Latin literature#}
+{#                        from 45 BC, making it over#}
+{#                      </p>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#                <div class="col-md-6">#}
+{#                  <div class="client_box">#}
+{#                    <div class="detail_box">#}
+{#                      <div class="img_box">#}
+{#                        <img src="/static/home/images/client-2.jpg" />#}
+{#                      </div>#}
+{#                      <h5>#}
+{#                        zabih jo#}
+{#                      </h5>#}
+{#                      <p>#}
+{#                        Contrary to popular belief, Lorem Ipsum is not simply random#}
+{#                        text. It has roots in a piece of classical Latin literature#}
+{#                        from 45 BC, making it over#}
+{#                      </p>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{#          <div class="carousel-item">#}
+{#            <div class="client_container">#}
+{#              <div class="row">#}
+{#                <div class="col-md-6">#}
+{#                  <div class="client_box">#}
+{#                    <div class="detail_box">#}
+{#                      <div class="img_box">#}
+{#                        <img src="/static/home/images/client-1.jpg" />#}
+{#                      </div>#}
+{#                      <h5>#}
+{#                        zabih jo#}
+{#                      </h5>#}
+{#                      <p>#}
+{#                        Contrary to popular belief, Lorem Ipsum is not simply random#}
+{#                        text. It has roots in a piece of classical Latin literature#}
+{#                        from 45 BC, making it over#}
+{#                      </p>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#                <div class="col-md-6">#}
+{#                  <div class="client_box">#}
+{#                    <div class="detail_box">#}
+{#                      <div class="img_box">#}
+{#                        <img src="/static/home/images/client-2.jpg" />#}
+{#                      </div>#}
+{#                      <h5>#}
+{#                        zabih jo#}
+{#                      </h5>#}
+{#                      <p>#}
+{#                        Contrary to popular belief, Lorem Ipsum is not simply random#}
+{#                        text. It has roots in a piece of classical Latin literature#}
+{#                        from 45 BC, making it over#}
+{#                      </p>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{#          <div class="carousel-item">#}
+{#            <div class="client_container">#}
+{#              <div class="row">#}
+{#                <div class="col-md-6">#}
+{#                  <div class="client_box">#}
+{#                    <div class="detail_box">#}
+{#                      <div class="img_box">#}
+{#                        <img src="/static/home/images/client-1.jpg" />#}
+{#                      </div>#}
+{#                      <h5>#}
+{#                        zabih jo#}
+{#                      </h5>#}
+{#                      <p>#}
+{#                        Contrary to popular belief, Lorem Ipsum is not simply random#}
+{#                        text. It has roots in a piece of classical Latin literature#}
+{#                        from 45 BC, making it over#}
+{#                      </p>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#                <div class="col-md-6">#}
+{#                  <div class="client_box">#}
+{#                    <div class="detail_box">#}
+{#                      <div class="img_box">#}
+{#                        <img src="/static/home/images/client-2.jpg" />#}
+{#                      </div>#}
+{#                      <h5>#}
+{#                        zabih jo#}
+{#                      </h5>#}
+{#                      <p>#}
+{#                        Contrary to popular belief, Lorem Ipsum is not simply random#}
+{#                        text. It has roots in a piece of classical Latin literature#}
+{#                        from 45 BC, making it over#}
+{#                      </p>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{##}
+{#    </div>#}
+{#  </section>#}
+
+  <!-- end client section -->
+
+  <!-- info section -->
+
+  <div id="section1">
+    <!-- Content of section 1 -->
+
+
+
+  <section class="info_section layout_padding">
+    <div class="info-logo">
+      <h2>
+        SPOTIT.AI
+      </h2>
+    </div>
+    <div class="container">
+      <div class="info_items">
+          <div class="item ">
+            <div class="img-box box-1">
+              <img src="" alt="">
+            </div>
+            <div class="detail-box">
+              <p>
+                MESCE Kuttippuram
+              </p>
+            </div>
+          </div>
+
+
+          <div class="item ">
+            <div class="img-box box-2">
+              <img src="" alt="">
+            </div>
+            <div class="detail-box">
+              <p>
+                +91 8848030916
+              </p>
+            </div>
+          </div>
+
+
+          <div class="item ">
+            <div class="img-box box-3">
+              <img src="" alt="">
+            </div>
+            <div class="detail-box">
+              <p>
+                spotit@gmail.com
+              </p>
+            </div>
+          </div>
+
+      </div>
+    </div>
+    <div class="partner-box">
+      <h4>
+        TEAM
+      </h4>
+        <h4>
+            Akhil<br>
+            Hrishabh<br>
+            Shaheem<br>
+            Sreejith<br>
+        </h4>
+
+
+    </div>
+  </section>
+</div>
+
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; 2024 All Rights Reserved. Design by SPOTIT.AI team
+
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="/static/home/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="/static/home/js/bootstrap.js"></script>
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").classList.toggle("menu_width");
+      document
+        .querySelector(".custom_menu-btn")
+        .classList.toggle("menu_btn-style");
+    }
+  </script>
+</body>
+
+</html>
